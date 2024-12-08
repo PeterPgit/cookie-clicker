@@ -12,6 +12,7 @@
 
 ### Modified
 
+- Added control instructions to options menu **(Ian)**
 - changed menu settings to toggle music and sfx independetly, got rid of Quit button **(Jack)**
 
 ## December 5 (Sprint 4)

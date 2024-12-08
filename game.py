@@ -708,6 +708,18 @@ class UIManager:
             title_text = "Settings"
             self.draw_text(title_text, title_font, BLACK, popup_x + popup_width // 2 - title_font.size(title_text)[0] // 2, popup_y + 10)
 
+            # Add control explanations
+            control_font = get_font(int(popup_height * 0.05))
+            control_texts = [
+                "Controls:",
+                "- Click the large cookie to earn cookies",
+                "- Use the in-game menu to save the game",
+                "- Press 'ESC' to toggle the main menu",
+                "- Purchase shop items to increase Cookies Per Click (CPC) and Cookies Per Second (CPS)"
+            ]
+            for i, text in enumerate(control_texts):
+                self.draw_text(text, control_font, BLACK, popup_x + 20, popup_y + int(popup_height * 0.15) + i * int(popup_height * 0.06))
+
             # Define the buttons and their labels
             button_labels = ["Save Game", "Toggle Music", "Toggle Sound", "Close Menu"]
             
@@ -734,7 +746,6 @@ class UIManager:
 
                 # Ensure the click is only handled once (we prevent double-clicking the button)
                 if button.is_clicked(mouse_pos) and mouse_pressed:
-                    print("Trying a button")
                     if not hasattr(self, '_button_clicked') or not self._button_clicked:
                         self._button_clicked = True  # Lock the button to avoid multiple triggers
                         self.sound_manager.play_sound("menu-click")
@@ -756,6 +767,7 @@ class UIManager:
                 if not mouse_pressed:
                     if hasattr(self, '_button_clicked') and self._button_clicked:
                         self._button_clicked = False  # Unlock the button when the button is released
+
 
     # renders the sliders used in the settings menu
     def draw_slider(self, label, x, y, popup_width, popup_height):

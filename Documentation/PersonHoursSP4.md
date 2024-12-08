@@ -16,7 +16,7 @@
 
 ### Ian Wilson
 
-
+- .5 (12/8)
 
 ### Andrew Uriell
 

@@ -18,5 +18,5 @@
   - [X] Fix button overlap on popup menus
   - [X] Fix buying upgrades through popup menus
 - [X] Save Slot Selection
-  - [ ] Fix issue where incorrect cookies are earned while away
-- [ ] Documentation
+  - [X] Fix issue where incorrect cookies are earned while away
+- [X] Documentation
